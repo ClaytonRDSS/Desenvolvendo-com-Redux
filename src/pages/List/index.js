@@ -5,7 +5,7 @@ import Car from '../../components/Car';
 
 export default function List() {
 	//seletor de estado
-	const cars = useSelector(state => state)
+	const cars = useSelector(state => state.cars);
 	return (
 		<div className="container-fluid">
 			<div className="row">{cars.map((car, index) => <Car key={index} car={car} />)}</div>
